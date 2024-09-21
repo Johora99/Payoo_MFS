@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Home Page</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'black-1' : 'rgb(8, 8, 8)',
+            'gray-1' : 'rgb(244, 245, 247)',
+            'blue-1' : 'rgb(8, 116, 242)',
+          }
+        }
+      }
+    }
+  </script>
+    <style>
+       .outfit {
+       font-family: "Outfit", sans-serif;
+    }
+    .artboard.phone-5{
+        height: max-content !important;
+    }
+    </style>
+</head>
+<body class="outfit bg-black">
+      <main class=" w-full  flex justify-center items-center">
+     <div class="artboard phone-5  bg-white ">
+    <section>
+    <div class="flex items-center justify-between pt-10 px-5">
+    <div class="flex items-center">
+     <img src="./assets/Group.png" alt="" class="w-12 h-12">
+    <div>
+    <h2 class="text-black-1 text-opacity-[0.9] text-lg font-extrabold">$
+        <span id="mainAmount">
+
+            45000
+        </span>
+    </h2>
+     <p class="text-black-1 text-sm text-opacity-[0.5] font-normal">Available Balance</p>
+    </div>
+    </div>
+    <button class="flex items-center border-[1px] border-black-1 border-opacity-[0.1] rounded-lg text-sm text-black-1 text-opacity-[0.5] font-normal py-2 px-3 gap-1" id="logOut">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+    </svg>    
+    Log Out</button>
+    </div>
+    <div class="divider w-full"></div>
+    </section>
+    <section>
+    <div class="px-5">
+    <div class="flex items-center ">
+    <p>&#128293</p>
+    <h1 class="text-2xl text-black-1 font-bold">Welcome to Payooo!</h1>
+    </div>
+    <p class="text-black-1 text-opacity-[0.5] text-base font-normal mt-3 mb-5">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+     </div>
+    </section>
+    <section class="pb-5">
+    <div class="px-5 grid grid-cols-3 gap-3">
+    <div class="border-[1px] border-black-1 border-opacity-[0.1] rounded-xl py-2.5 px-5 justify-self-center w-full text-center cursor-pointer" id="addMoney">
+    <img src="./assets/group-1.png" alt="" class="mx-auto">
+    <p class="text-black-1 text-opacity-[0.7] text-sm font-normal mt-1">Add Money</p>
+    </div>
+    <div class="border-[1px] border-black-1 border-opacity-[0.1] rounded-xl py-2.5 px-5 justify-self-center w-full text-center cursor-pointer" id="cashOut">
+    <img src="./assets/send 1.png" alt="" class="mx-auto">
+    <p class="text-black-1 text-opacity-[0.7] text-sm font-normal mt-1">Cashout</p>
+    </div>
+    <div class="border-[1px] border-black-1 border-opacity-[0.1] rounded-xl py-2.5 px-5 justify-self-center w-full text-center cursor-pointer">
+    <img src="./assets/money 1.png" alt="" class="mx-auto">
+    <p class="text-black-1 text-opacity-[0.7] text-sm font-normal mt-1" id="transfer">Transfer </p>
+    </div>
+    <div class="border-[1px] border-black-1 border-opacity-[0.1] rounded-xl py-2.5 px-5 justify-self-center w-full text-center cursor-pointer">
+    <img src="./assets/financial 1.png" alt="" class="mx-auto">
+    <p class="text-black-1 text-opacity-[0.7] text-sm font-normal mt-1" id="getBonus">Get Bonus</p>
+    </div>
+    <div class="border-[1px] border-black-1 border-opacity-[0.1] rounded-xl py-2.5 px-5 justify-self-center w-full text-center cursor-pointer">
+    <img src="./assets/purse 1.png" alt="" class="mx-auto">
+    <p class="text-black-1 text-opacity-[0.7] text-sm font-normal mt-1" id="payBill">Pay Bill</p>
+    </div>
+    <div class="border-[1px] border-black-1 border-opacity-[0.1] rounded-xl py-2.5 px-5 justify-self-center w-full text-center cursor-pointer">
+    <img src="./assets/transaction 1.png" alt="" class="mx-auto">
+    <p class="text-black-1 text-opacity-[0.7] text-sm font-normal mt-1" id="transactions">Transactions</p>
+    </div>
+    </div>
+    </section>
+    <section class="hidden" id="addMoneyBox">
+    <div class="bg-gray-1 py-5">
+    <h4 class="text-black-1 px-5 text-lg font-semibold text-opacity-[0.9]">Add Money</h4>
+    <div class="hero">
+    <div class="hero-content w-full">
+    <div class="card bg-base-100 shadow-2xl w-full">
+    <form class="card-body ">
+    <div class="form-control">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Select A Bank</span>
+    </label>
+    <select class="select select-bordered w-full max-w-xs rounded-full bg-gray-1 border-0 text-black-1 text-opacity-[0.4] text-base font-light">
+    <option class="text-black-1 ">Select back</option>
+    <option class="text-black-1">Han Solo</option>
+    <option class="text-black-1">Greedo</option>
+    </select>
+    </div>
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Bank Account Number</span>
+    </label>
+    <input id="acountNum" type="tel" placeholder="Enter 11 digit account number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Amount to Add</span>
+    </label>
+    <input id="addAmount" type="tel" placeholder="Add Amount to withdraw" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Pin Number</span>
+   </label>
+   <input id="pinNum" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control mt-6">
+    <button class="btn btn-primary rounded-full bg-blue-1 border-0 text-xl text-white font-semibold" id="addMoneyBtn">Add Money</button>
+    </div>
+    </form>
+    </div>
+    </div>
+                    </div>
+                    </div>
+    </section>
+      <section class="hidden" id="outMoneyBox">
+    <div class="bg-gray-1 py-5">
+    <h4 class="text-black-1 px-5 text-lg font-semibold text-opacity-[0.9]">Cash Out</h4>
+    <div class="hero">
+    <div class="hero-content w-full">
+    <div class="card bg-base-100 shadow-2xl w-full">
+    <form class="card-body ">
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Agent Number</span>
+    </label>
+    <input id="agentNum" type="tel" placeholder="Enter 11 digit number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Amount</span>
+    </label>
+    <input id="outAmount" type="tel" placeholder="Enter amount to withdraw" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Pin Number</span>
+   </label>
+   <input id="pinnum" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control mt-6">
+    <button class="btn btn-primary rounded-full bg-blue-1 border-0 text-xl text-white font-semibold" id="withdrawMoneyBtn">Withdraw Money</button>
+    </div>
+    </form>
+    </div>
+    </div>
+                    </div>
+                    </div>
+    </section>
+      <section class="hidden"  id="transferMoney">
+    <div class="bg-gray-1 py-5">
+    <h4 class="text-black-1 px-5 text-lg font-semibold text-opacity-[0.9]">Transfer Money</h4>
+    <div class="hero">
+    <div class="hero-content w-full">
+    <div class="card bg-base-100 shadow-2xl w-full">
+    <form class="card-body ">
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">User Account Number</span>
+    </label>
+    <input id="userNum" type="tel" placeholder="Enter 11 digit number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Amount</span>
+    </label>
+    <input id="sendAmount" type="tel" placeholder="Enter amount to withdraw" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Pin Number</span>
+   </label>
+   <input id="piNnum" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control mt-6">
+    <button class="btn btn-primary rounded-full bg-blue-1 border-0 text-xl text-white font-semibold" id="transferMoneyBtn">Send Now</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+      <section class="hidden"  id="getBonusCoupon">
+    <div class="bg-gray-1 py-5">
+    <h4 class="text-black-1 px-5 text-lg font-semibold text-opacity-[0.9]">Get Bonus</h4>
+    <div class="hero">
+    <div class="hero-content w-full">
+    <div class="card bg-base-100 shadow-2xl w-full">
+    <form class="card-body ">
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Enter Bonus Coupon</span>
+    </label>
+    <input id="bonusPin" type="tel" placeholder="Enter your coupon" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control mt-6">
+    <button class="btn btn-primary rounded-full bg-blue-1 border-0 text-xl text-white font-semibold" id="getBonusBtn">Get Bonus</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+   <section class="hidden" id="payBillBox">
+    <div class="bg-gray-1 py-5">
+    <h4 class="text-black-1 px-5 text-lg font-semibold text-opacity-[0.9]">Pay Bill</h4>
+    <div class="hero">
+    <div class="hero-content w-full">
+    <div class="card bg-base-100 shadow-2xl w-full">
+    <form class="card-body ">
+    <div class="form-control">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Select To Pay</span>
+    </label>
+    <select class="select select-bordered w-full max-w-xs rounded-full bg-gray-1 border-0 text-black-1 text-opacity-[0.4] text-base font-light">
+    <option class="text-black-1 ">Select back</option>
+    <option class="text-black-1">Han Solo</option>
+    <option class="text-black-1">Greedo</option>
+    </select>
+    </div>
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Biller Account Number</span>
+    </label>
+    <input id="billerNum" type="tel" placeholder="Enter account number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control ">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Amount to Pay</span>
+    </label>
+    <input id="payAmount" type="tel" placeholder="Add Amount to pay" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control">
+    <label class="label">
+    <span class="label-text text-black-1 text-base font-medium">Pin Number</span>
+   </label>
+   <input id="pin" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered placeholder:text-black-1 placeholder:opacity-[0.4] placeholder:text-base placeholder:font-light rounded-full bg-gray-1 border-0" required />
+    </div>
+    <div class="form-control mt-6">
+    <button class="btn btn-primary rounded-full bg-blue-1 border-0 text-xl text-white font-semibold" id="payBillBtn">Pay Now</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="" id="transactionBox">
+      <div class="bg-gray-1 py-5" id="main">
+         <h4 class="text-black-1 px-5 text-lg font-semibold text-opacity-[0.9]">Transaction History</h4>
+         <div id="history">
+         </div>
+      </div>
+    </section>
+       
+    </div>
+
+          
+    </main>
+
+    <script src="./Js/utilities.js"></script>
+    <script src="./Js/home.js"></script>
+</body>
+</html>
